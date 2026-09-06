@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfólio profissional de Aline Xavier — Administração, gestão, processos, finanças, pessoas e projetos.">
+<title>Aline Xavier | Administração</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--text:#172033;--muted:#687386;--line:#e5e8ee;--primary:#24366b;--primary2:#506ac4;--soft:#eef1fb;--dark:#111827}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;color:var(--primary);letter-spacing:.3px}.links{display:flex;gap:23px;color:var(--muted);font-size:13px}.links a:hover{color:var(--primary)}
+.hero{padding:90px 0 76px;background:linear-gradient(135deg,#edf1fc,#fff 62%,#f5f6f8)}.hero-grid{display:grid;grid-template-columns:1.45fr .75fr;gap:65px;align-items:center}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;font-weight:900;color:var(--primary2)}h1{font-size:clamp(43px,6vw,70px);line-height:1.02;letter-spacing:-3px;margin:12px 0 22px}.hero p{font-size:18px;color:var(--muted);max-width:700px}.pills{display:flex;flex-wrap:wrap;gap:9px;margin:25px 0}.pill{padding:7px 12px;border:1px solid var(--line);background:#fff;border-radius:999px;font-size:12px;font-weight:750}.button{display:inline-block;background:var(--primary);color:#fff;padding:12px 17px;border-radius:9px;font-weight:800;font-size:13px}
+.identity{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 20px 55px rgba(25,37,75,.08)}.monogram{width:78px;height:78px;border-radius:20px;background:var(--soft);display:grid;place-items:center;color:var(--primary);font-size:25px;font-weight:950;margin-bottom:20px}.identity h3{margin:0 0 4px}.identity p{font-size:14px;margin:0;color:var(--muted)}
+section{padding:70px 0}.head{max-width:740px;margin-bottom:32px}.head h2{font-size:34px;letter-spacing:-1.2px;margin:6px 0 8px}.head p{color:var(--muted);margin:0}.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}.card h3{margin:8px 0;font-size:19px}.card p{color:var(--muted);font-size:14px}.tag{display:inline-block;background:var(--soft);color:var(--primary);border-radius:7px;padding:5px 9px;font-size:10px;text-transform:uppercase;letter-spacing:.7px;font-weight:900}.number{font-size:11px;color:var(--muted);font-weight:900}.card ul{padding-left:19px;color:var(--muted);font-size:14px}.card li{margin:6px 0}
+section.alt{background:#fff}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:21px}.stat strong{display:block;font-size:28px;color:var(--primary);letter-spacing:-1px}.stat span{font-size:12px;color:var(--muted)}
+.table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:650px}th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);font-size:13px}th{font-size:11px;text-transform:uppercase;letter-spacing:.5px;background:#f8f9fb}tr:last-child td{border:0}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:9px;margin-top:20px}.flow div{background:#f8f9fc;border:1px solid var(--line);border-radius:10px;padding:15px;text-align:center}.flow b{display:block;color:var(--primary);font-size:13px}.flow span{font-size:11px;color:var(--muted)}
+.case{background:var(--primary);color:#fff;border-radius:20px;padding:32px}.case p,.case li{color:#e3e7f5;font-size:14px}.case h3{font-size:24px;margin:10px 0}.case .tag{background:#fff;color:var(--primary)}
+.timeline{border-left:2px solid #dce2f2;padding-left:24px;margin:4px 0}.time{position:relative;margin-bottom:23px}.time:last-child{margin:0}.time:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--primary2);left:-30px;top:9px}.time h4{margin:0}.time p{margin:2px 0;color:var(--muted);font-size:14px}
+.skills{display:flex;flex-wrap:wrap;gap:9px}.skill{background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:12px;font-weight:750}
+.cta-section{background:#eef1fb}.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:25px}.contact-card p{font-size:14px;color:var(--muted)}footer{background:var(--dark);color:#dce1ec;padding:38px 0}footer p{font-size:12px;color:#9ca7b9;margin:4px 0}
+@media(max-width:820px){.hero-grid,.g2,.g3,.contact{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.links{display:none}.hero{padding:58px 0}.flow{grid-template-columns:1fr 1fr}h1{letter-spacing:-2px}}
+@media(max-width:480px){.stats,.flow{grid-template-columns:1fr}section{padding:52px 0}}
+</style>
+</head>
+<body>
+
+<nav><div class="container nav">
+<a class="logo" href="#inicio">ALINE XAVIER</a>
+<div class="links"><a href="#sobre">Sobre</a><a href="#competencias">Competências</a><a href="#projetos">Projetos</a><a href="#indicadores">Indicadores</a><a href="#formacao">Formação</a></div>
+</div></nav>
+
+<header class="hero" id="inicio">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Portfólio profissional · Administração</div>
+<h1>Organização, análise e gestão para transformar processos em resultados.</h1>
+<p>Sou Aline Xavier, estudante de Bacharelado em Administração. Tenho interesse em gestão, processos, rotinas administrativas, análise de informações e melhoria contínua, buscando aplicar meus conhecimentos de forma prática e desenvolver soluções organizadas para o ambiente empresarial.</p>
+<div class="pills"><span class="pill">Gestão</span><span class="pill">Processos</span><span class="pill">Finanças</span><span class="pill">Pessoas</span><span class="pill">Projetos</span><span class="pill">Indicadores</span></div>
+<a class="button" href="#projetos">Ver projetos ↓</a>
+</div>
+<div class="identity">
+<div class="monogram">AX</div>
+<h3>Aline Xavier</h3>
+<p>Bacharelado em Administração · Em formação</p>
+<hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+<p><strong>Foco profissional</strong></p>
+<p>Atuação em áreas administrativas, operações, financeiro, comercial, RH e apoio à gestão.</p>
+</div>
+</div>
+</header>
+
+<section id="sobre">
+<div class="container">
+<div class="head"><div class="eyebrow">01 · Perfil</div><h2>Uma formação construída com visão prática</h2><p>Minha proposta profissional é unir conhecimento acadêmico, organização e capacidade analítica para apoiar as rotinas e decisões de uma empresa.</p></div>
+<div class="grid g3">
+<div class="card"><span class="tag">Organização</span><h3>Rotinas e processos</h3><p>Estruturação de tarefas, controles, documentos, fluxos e acompanhamento de atividades para aumentar a clareza e a produtividade.</p></div>
+<div class="card"><span class="tag">Análise</span><h3>Informação para decisão</h3><p>Leitura de dados, criação de indicadores e organização de informações para apoiar decisões mais objetivas.</p></div>
+<div class="card"><span class="tag">Melhoria</span><h3>Visão de solução</h3><p>Identificação de gargalos, análise de causas e proposição de melhorias simples, mensuráveis e aplicáveis.</p></div>
+</div>
+</div>
+</section>
+
+<section class="alt" id="competencias">
+<div class="container">
+<div class="head"><div class="eyebrow">02 · Competências</div><h2>Competências aplicáveis à Administração</h2><p>Conhecimentos e habilidades que venho desenvolvendo durante minha formação.</p></div>
+<div class="skills">
+<span class="skill">Rotinas administrativas</span><span class="skill">Organização de documentos</span><span class="skill">Controle de processos</span><span class="skill">Excel e planilhas</span><span class="skill">Google Sheets</span><span class="skill">Indicadores e KPIs</span><span class="skill">Fluxo de caixa</span><span class="skill">Custos e despesas</span><span class="skill">Recrutamento e seleção</span><span class="skill">Onboarding</span><span class="skill">Gestão de projetos</span><span class="skill">Marketing</span><span class="skill">Comunicação empresarial</span><span class="skill">Resolução de problemas</span><span class="skill">IA para produtividade</span>
+</div>
+</div>
+</section>
+
+<section id="projetos">
+<div class="container">
+<div class="head"><div class="eyebrow">03 · Projetos</div><h2>Aplicação prática dos conhecimentos</h2><p>Os projetos abaixo demonstram como estruturo problemas, organizo informações, proponho soluções e defino formas de acompanhar resultados.</p></div>
+<div class="grid g2">
+<article class="card"><div class="number">PROJETO 01 · PROCESSOS</div><h3>Mapeamento e melhoria de processos</h3><p>Estruturação de um fluxo administrativo para reduzir atrasos, retrabalho e falta de clareza nas responsabilidades.</p><ul><li>Mapeamento do processo atual.</li><li>Identificação de gargalos.</li><li>Definição de responsáveis.</li><li>Padronização das etapas.</li><li>Acompanhamento por indicadores.</li></ul></article>
+<article class="card"><div class="number">PROJETO 02 · FINANCEIRO</div><h3>Controle financeiro empresarial</h3><p>Modelo de controle para organizar receitas, despesas, custos e resultado operacional de uma pequena empresa.</p><ul><li>Fluxo de caixa.</li><li>Classificação de gastos.</li><li>Margem de contribuição.</li><li>Ponto de equilíbrio.</li><li>Análise gerencial.</li></ul></article>
+<article class="card"><div class="number">PROJETO 03 · PESSOAS</div><h3>Recrutamento e onboarding</h3><p>Estruturação de um processo para contratação e integração de um profissional administrativo.</p><ul><li>Perfil e competências da vaga.</li><li>Matriz de avaliação.</li><li>Roteiro de entrevista.</li><li>Checklist de integração.</li><li>Acompanhamento 7/30/60 dias.</li></ul></article>
+<article class="card"><div class="number">PROJETO 04 · OPERAÇÕES</div><h3>Controle de estoque</h3><p>Modelo de acompanhamento para melhorar a visibilidade das entradas, saídas e níveis de estoque.</p><ul><li>Registro de movimentações.</li><li>Estoque mínimo.</li><li>Curva de atenção aos itens.</li><li>Inventário periódico.</li><li>Indicadores de ruptura e giro.</li></ul></article>
+<article class="card"><div class="number">PROJETO 05 · PROJETOS</div><h3>Planejamento de projeto</h3><p>Estruturação de um projeto desde o objetivo até o acompanhamento de prazos, riscos e entregas.</p><ul><li>Escopo e objetivos.</li><li>Cronograma.</li><li>Responsáveis.</li><li>Riscos e ações preventivas.</li><li>Indicadores de execução.</li></ul></article>
+<article class="card"><div class="number">PROJETO 06 · MARKETING</div><h3>Plano de marketing para negócio local</h3><p>Planejamento de ações para organizar presença digital, público-alvo e acompanhamento dos resultados.</p><ul><li>Persona e público-alvo.</li><li>Análise de concorrência.</li><li>Calendário de conteúdo.</li><li>Funil de conversão.</li><li>KPIs de marketing.</li></ul></article>
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="container">
+<div class="head"><div class="eyebrow">04 · Case de gestão</div><h2>Da identificação do problema ao acompanhamento</h2><p>Exemplo de raciocínio administrativo aplicado a um processo empresarial.</p></div>
+<div class="grid g2">
+<div class="case"><span class="tag">Diagnóstico</span><h3>Redução de atrasos em pedidos</h3><p>O processo apresenta atrasos porque existem informações incompletas na abertura, responsabilidades pouco claras e ausência de acompanhamento centralizado.</p><ul><li>Padronizar a abertura dos pedidos.</li><li>Definir responsáveis por etapa.</li><li>Criar checklist operacional.</li><li>Centralizar o acompanhamento.</li></ul></div>
+<div class="card"><span class="tag">Fluxo proposto</span><div class="flow"><div><b>01</b><span>Registrar</span></div><div><b>02</b><span>Validar</span></div><div><b>03</b><span>Executar</span></div><div><b>04</b><span>Conferir</span></div><div><b>05</b><span>Concluir</span></div></div><p>O objetivo é tornar o processo mais previsível e permitir que desvios sejam identificados antes de comprometer a entrega.</p></div>
+</div>
+</div>
+</section>
+
+<section id="indicadores">
+<div class="container">
+<div class="head"><div class="eyebrow">05 · Indicadores</div><h2>Gestão orientada por números</h2><p>Exemplos de indicadores que podem ser utilizados para acompanhar o desempenho de uma operação administrativa.</p></div>
+<div class="stats">
+<div class="stat"><strong>≤ 24h</strong><span>Tempo médio de validação</span></div>
+<div class="stat"><strong>≥ 95%</strong><span>Pedidos dentro do prazo</span></div>
+<div class="stat"><strong>≤ 5%</strong><span>Pedidos com retrabalho</span></div>
+<div class="stat"><strong>0</strong><span>Pedidos sem responsável definido</span></div>
+</div>
+<div style="margin-top:22px" class="table-wrap"><table><thead><tr><th>Indicador</th><th>Fórmula / método</th><th>Frequência</th><th>Finalidade</th></tr></thead><tbody>
+<tr><td>Tempo médio</td><td>Tempo total ÷ número de pedidos</td><td>Semanal</td><td>Identificar lentidão</td></tr>
+<tr><td>Cumprimento de prazo</td><td>Pedidos no prazo ÷ total × 100</td><td>Semanal</td><td>Medir previsibilidade</td></tr>
+<tr><td>Retrabalho</td><td>Pedidos refeitos ÷ total × 100</td><td>Mensal</td><td>Medir qualidade</td></tr>
+<tr><td>Backlog</td><td>Pedidos pendentes no período</td><td>Diário</td><td>Evitar acúmulo</td></tr>
+</tbody></table></div>
+</div>
+</section>
+
+<section class="alt">
+<div class="container">
+<div class="head"><div class="eyebrow">06 · Financeiro</div><h2>Exemplo de análise financeira</h2><p>Modelo demonstrativo para organizar informações e apoiar uma leitura gerencial.</p></div>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th>Valor mensal</th><th>Tipo</th><th>Interpretação</th></tr></thead><tbody>
+<tr><td>Receita de vendas</td><td>R$ 30.000</td><td>Receita</td><td>Faturamento utilizado na análise</td></tr>
+<tr><td>Custos variáveis</td><td>R$ 12.000</td><td>Variável</td><td>40% da receita</td></tr>
+<tr><td>Despesas fixas</td><td>R$ 10.000</td><td>Fixa</td><td>Estrutura mensal</td></tr>
+<tr><td>Resultado operacional</td><td>R$ 8.000</td><td>Resultado</td><td>Receita − custos − despesas</td></tr>
+</tbody></table></div>
+<div class="stats" style="margin-top:18px"><div class="stat"><strong>60%</strong><span>Margem de contribuição</span></div><div class="stat"><strong>26,7%</strong><span>Resultado / receita</span></div><div class="stat"><strong>R$ 16.667</strong><span>Ponto de equilíbrio aproximado</span></div><div class="stat"><strong>R$ 8.000</strong><span>Resultado operacional</span></div></div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="head"><div class="eyebrow">07 · Pessoas</div><h2>Recrutamento e desenvolvimento</h2><p>Uma abordagem estruturada para apoiar a entrada e o desenvolvimento de profissionais.</p></div>
+<div class="grid g2">
+<div class="card"><span class="tag">Seleção</span><h3>Matriz de avaliação</h3><div class="table-wrap"><table style="min-width:0"><thead><tr><th>Critério</th><th>Peso</th></tr></thead><tbody><tr><td>Comunicação</td><td>25%</td></tr><tr><td>Organização</td><td>25%</td></tr><tr><td>Ferramentas / Excel</td><td>20%</td></tr><tr><td>Raciocínio lógico</td><td>15%</td></tr><tr><td>Postura profissional</td><td>15%</td></tr></tbody></table></div></div>
+<div class="card"><span class="tag">Onboarding</span><h3>Plano de acompanhamento</h3><div class="timeline"><div class="time"><h4>7 dias</h4><p>Conhecimento da empresa, equipe, sistemas, processos e responsabilidades.</p></div><div class="time"><h4>30 dias</h4><p>Execução das principais rotinas com autonomia crescente.</p></div><div class="time"><h4>60 dias</h4><p>Avaliação do desenvolvimento e identificação de uma oportunidade de melhoria.</p></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="alt" id="formacao">
+<div class="container">
+<div class="head"><div class="eyebrow">08 · Formação</div><h2>Formação e desenvolvimento</h2><p>Construindo uma base profissional voltada à gestão e ao ambiente empresarial.</p></div>
+<div class="card">
+<div class="timeline">
+<div class="time"><h4>Bacharelado em Administração</h4><p>Curso em andamento, com desenvolvimento de conhecimentos em gestão, processos, finanças, pessoas, marketing, estratégia e organização empresarial.</p></div>
+<div class="time"><h4>Projetos práticos</h4><p>Aplicação dos conhecimentos por meio de cases, modelos de controle, indicadores, análises e estruturas de gestão.</p></div>
+<div class="time"><h4>Desenvolvimento contínuo</h4><p>Aperfeiçoamento de ferramentas digitais, comunicação profissional, produtividade e uso responsável de tecnologia e inteligência artificial.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="cta-section">
+<div class="container">
+<div class="head" style="margin-bottom:0">
+<div class="eyebrow">09 · Encerramento</div>
+<h2>Conhecimento preparado para virar prática.</h2>
+<p>Minha formação em Administração está sendo construída com foco em organização, análise, processos e gestão. Este portfólio representa a forma como estruturo problemas, desenvolvo soluções e acompanho resultados.</p>
+</div>
+</div>
+</section>
+
+<footer><div class="container"><strong>Aline Xavier · Portfólio de Administração</strong><p>Administração · Gestão · Processos · Finanças · Pessoas · Projetos</p><p>© 2026 Aline Xavier</p></div></footer>
+</body>
+</html>
